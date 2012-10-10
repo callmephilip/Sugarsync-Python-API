@@ -22,7 +22,7 @@ class RefreshToken:
 
 	@staticmethod
 	def getRefreshToken(username, password, application, accessKey, privateAccessKey):
-		request_body = auth_dom=xml.dom.minidom.parseString(RefreshToken.APP_AUTH_REQUEST_TEMPLATE % { "username" : username, "password" : password, "application" : application, "accessKey" : accessKey, "privateAccessKey" : privateAccessKey})
+		request_body = xml.dom.minidom.parseString(RefreshToken.APP_AUTH_REQUEST_TEMPLATE % { "username" : username, "password" : password, "application" : application, "accessKey" : accessKey, "privateAccessKey" : privateAccessKey})
 
 		print "request: %s" % request_body.toxml()
 

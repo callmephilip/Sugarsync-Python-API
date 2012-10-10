@@ -18,7 +18,7 @@ class AccessToken:
 
     @staticmethod
     def getAccessToken(accessKeyId, privateAccessKey, refreshToken):
-        request_body = auth_dom=xml.dom.minidom.parseString(AccessToken.ACCESS_TOKEN_AUTH_REQUEST_TEMPLATE % { "accessKey" : accessKeyId, "privateAccessKey" : privateAccessKey, "refreshToken" : refreshToken})
+        request_body = xml.dom.minidom.parseString(AccessToken.ACCESS_TOKEN_AUTH_REQUEST_TEMPLATE % { "accessKey" : accessKeyId, "privateAccessKey" : privateAccessKey, "refreshToken" : refreshToken})
 
         print "request: %s" % request_body.toxml()
 
