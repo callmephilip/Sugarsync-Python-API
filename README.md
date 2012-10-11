@@ -18,7 +18,7 @@ Or you can use a shortcut:
 
 ```python
 
-from auth import authenticate
+from sugarsync.auth import authenticate
 
 access_token, refresh_token  = authenticate("email","password", "application-id", "app-key", "app-secret")
 
