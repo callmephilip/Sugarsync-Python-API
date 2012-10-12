@@ -24,8 +24,6 @@ class RefreshToken:
 	def getRefreshToken(username, password, application, accessKey, privateAccessKey):
 		request_body = xml.dom.minidom.parseString(RefreshToken.APP_AUTH_REQUEST_TEMPLATE % { "username" : username, "password" : password, "application" : application, "accessKey" : accessKey, "privateAccessKey" : privateAccessKey})
 
-		print "request: %s" % request_body.toxml()
-
 		http = httplib2.Http()
 		resp, content = http.request(RefreshToken.APP_AUTH_REFRESH_TOKEN_API_URL, method='POST', body=request_body.toxml(), headers={"User-Agent" : RefreshToken.API_SAMPLE_USER_AGENT, "Content-type": "application/xml; charset=UTF-8"})
 		
