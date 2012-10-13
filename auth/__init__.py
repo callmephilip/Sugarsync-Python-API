@@ -1,5 +1,5 @@
-from auth.RefreshToken import RefreshToken
-from auth.AccessToken import AccessToken
+from RefreshToken import RefreshToken
+from AccessToken import AccessToken
 
 def authenticate(email,password, application_id, application_key, application_secret):
 	"""
